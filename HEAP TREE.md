@@ -18,9 +18,23 @@ To write a Python program to build a heap tree using appropriate Python package 
 
 ## Program
 
-```
+```python
+from binarytree import heap,build,Node
+def heaptree(L):
+  x=L
+  t=build(x)
+  for i in t.values:
+    print(i,"-->",end='')
+  print("\nHeight : ",t.height)
+  print("Is min heap? : ",t.is_min_heap)
+  print("Is complete tree? : ",t.is_complete)
 ```
 
 ## OUTPUT
 
+![431412488-12625415-aec9-4cf2-ac70-e72d313f8a49](https://github.com/user-attachments/assets/e778e75b-7b9f-4bd6-bbc5-cb05c33aed31)
+
+
+
 ## RESULT
+thus the task has been completed To Build Binary Tree and Check Min Heap, Completeness, and Height and successfully verified
