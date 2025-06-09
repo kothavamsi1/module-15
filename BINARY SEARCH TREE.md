@@ -24,11 +24,34 @@ To write a Python program to build a Binary Search Tree (BST) using a built-in f
 
 ## Program
 
-```
+```python
+from binarytree import Node
+def _build_bst_from_sorted_values(sorted_values):
+    
+    if len(sorted_values) == 0:
+        return None
+    mid_index = len(sorted_values) // 2
+    root = Node(sorted_values[mid_index])
+    root.left = _build_bst_from_sorted_values(sorted_values[:mid_index])
+    root.right = _build_bst_from_sorted_values(sorted_values[mid_index + 1 :])  
+    return (root)
+
+a=[]
+size=int(input())
+for i in range(0,size):
+  val=int(input())
+  a.append(val)
+x=sorted(a)
+l=_build_bst_from_sorted_values(x)
+print(l.postorder)
+print(l.is_bst)
 
 ```
 
 ## OUTPUT
 
+![431409539-459e6d01-d310-47a8-9f86-f7909db939c7](https://github.com/user-attachments/assets/a8f20b13-b760-4768-b033-ab48037824f0)
+
 
 ## RESULT
+Thus program Accepts float values from the user,Builds a balanced binary search tree from the sorted input list using recursion,Displays the post-order traversal of the tree,Verifies and prints whether the tree satisfies BST properties.
