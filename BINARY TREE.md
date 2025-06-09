@@ -20,15 +20,33 @@ To write a Python program to build a binary tree with a root, left, and right no
 ## Program
 
 ```python
-from binarytree import Node
+class Node:
+    def __init__(self, value):
+        self.value = value
+        self.left = None
+        self.right = None
 
-# Input float values for root and child nodes
+# Step 1: Get float inputs from the user
+values = []
+for i in range(3):
+    val = float(input(f"Enter value {i+1} (float): "))
+    values.append(val)
 
+# Step 2: Build the binary tree
+root = Node(values[0])
+root.left = Node(values[1])
+root.right = Node(values[2])
 
-# Print the binary tree as a list
+# Step 3: Print the list of node values
+print("List of node values in the binary tree:", values)
 
 ```
 
 ## OUTPUT
 
+![431408316-1b82011c-1dda-4392-b4c6-1b24197ca709](https://github.com/user-attachments/assets/97a4c67f-a4aa-4150-bcd7-6b31254436b8)
+
+
+
 ## RESULT
+The program accepts three float values from the user, builds a binary tree with those values, and prints the list of node values.
